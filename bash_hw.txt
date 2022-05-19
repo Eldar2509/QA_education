@@ -1,0 +1,44 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я --- pwd
+2) Создать папку --- mkdir hw1
+3) Зайти в папку --- cd ~/hw1
+4) Создать 3 папки --- mkdir test1 test2 test3
+5) Зайти в любоую папку --- cd/home/liar/test или ~/test
+6) Создать 5 файлов (3 txt, 2 json) --- touch test1.txt test2.txt test3.txt file1.json file2.json
+7) Создать 3 папки ---  mkdir folder_1 folder_2 folder_3 
+8) Вывести список содержимого папки ---  ls hw1
+9) + Открыть любой txt файл --- cat >> file1.txt
+10) + написать туда что-нибудь, любой текст. --- ???
+11) + сохранить и выйти. --- Ctrl + C
+12) Выйти из папки на уровень выше --- cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. mv hw1/test.txt test1.json folder_1/
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. cp folder_1/test.txt test1.json folder_2/
+15) Найти файл по имени --- find -name 'test*'
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. --- 
+17) вывести несколько первых строк из текстового файла --- head -n 2 test.txt
+18) вывести несколько последних строк из текстового файла --- tail -n 2 test.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. --- 
+20) вывести дату и время --- date
+
+Задание *
+1) Отправить http запрос на сервер. http://162.55.220.72:5005/terminal-hw-request
+
+curl -i 'http://162.55.220.72:5005/terminal-hw-request'
+curl --date "name=liar&age=13" http:/162.55.220.72:5005/get_method?
+curl 'http:/162.55.220.72:5005/get_method?name=liar&age=13'
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 bash script.sh
+script.sh
+#!usr/bin/bash
+
+cd ~/hw1
+mkdir test1 test2 test3
+cd/home/liar/test
+touch test1.txt test2.txt test3.txt file1.json file2.json
+mkdir folder_1 folder_2 folder_3 
+ls hw1
+mv hw1/test.txt test1.json folder_1/
+
